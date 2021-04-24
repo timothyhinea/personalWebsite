@@ -1,0 +1,28 @@
+{
+  "name": "cst336_lab4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timothyhinea/CST336_lab4.git"
+  },
+  "author": "Andrew Hinea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timothyhinea/CST336_lab4/issues"
+  },
+  "homepage": "https://github.com/timothyhinea/CST336_lab4#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "jspdf": "^2.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
