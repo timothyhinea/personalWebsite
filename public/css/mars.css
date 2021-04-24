@@ -103,23 +103,4 @@ body {
 				}
 			}
 			
-			@media print {
-				
-				#pic{
-					visibility: hidden;
-				}
-				.topStuff{
-					visibility: hidden;
-				}
-			    .invoice-box {
-			    	
-			        background: #fff;
-					position: fixed;
-					bottom: 0;
-					right: 0;
-					left: 0;
-					top: 0;
-				  	width: 670px; /* width: 7in; */
-  					height: 900px; /* or height: 9.5in; */
-			    }
-			}
+			

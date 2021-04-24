@@ -9,24 +9,9 @@ $(document).ready(function() {
 	// Prompt user to login or register
 	$('#main-dialog').show();
 	
-    
-	// the input elements on the login form
-	var loginName = document.getElementById("loginName");
-	var loginPassword = document.getElementById("loginPassword");
-	var loginButton = document.getElementById("loginButton");
-
-	// the input elements on the registration form
-	var accountName = document.getElementById("accountName");
-	var accountPassword = document.getElementById("password");
-	var accountPasswordRepeat = document.getElementById("repeatPassword");
-	var accountDisplayName = document.getElementById("displayName");
-	var registerButton = document.getElementById("registerButton");
-
-	const input = document.querySelectorAll('input');
-	
 
     var specialElementHandlers = {
-        '#editor': function (element, renderer) {
+        "#editor": function (element, renderer) {
             return true;
             }
     };	
@@ -34,7 +19,6 @@ $(document).ready(function() {
     var doc = new jsPDF();
     
     $('#cmd').click(function () {
-        alert();
         doc.fromHTML($('#content').html(), 15, 15, {
             'width': 170,
                 'elementHandlers': specialElementHandlers
