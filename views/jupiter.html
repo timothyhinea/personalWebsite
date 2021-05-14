@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Matching Game</title>
+        <link rel="stylesheet" 
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="css/styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.11.0/underscore-min.js" ></script> 
+
+			<script src="js/jupiter.js"></script>
+    </head>
+    <body class="text-center">
+        
+        <h1>Matching Game</h1>
+
+        <hr />
+        <nav>
+            <a href="/">Home</a>
+            <a href="/venus">Venus</a>
+            <a href="/mercury">Mercury</a>
+            <a href="/earth">Earth</a>
+            <a href="/mars">Mars</a>
+            <a href="/jupiter">Jupiter</a>
+        </nav>
+        <br /><br />
+
+    	
+    	 <!-- Question 4 -->
+    	<h3 id="displayMessage"><span id="markImg4"></span>Pick a card any card</h3>
+    	<div id="cardChoices"></div>
+		<div id="q4Feedback"></div>
+		<br><br>
+		
+		<!-- Question 5 -->
+		<h3><span id="markImg5"></span>Won Pairs</h3>
+		<div id="wonPairs"></div>
+	    <div id="q5Feedback"></div>
+	    <br></br>
+	    
+
+        <!-- Validation and score -->
+        
+        <h2 id="totalScore"></h2>
+        <button class="btn btn-outline-success" onclick="history.go(0);">Restart</button>
+        <br><br>
+      
+
+
+        
+    </body>
+    
+    <%- include('partials/footer.ejs') %>
+
+</html>

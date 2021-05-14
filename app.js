@@ -24,7 +24,11 @@ app.get("/mars", function(req, res){
     res.render("mars.html");
 })
 
+app.get("/jupiter", function(req, res){
+    res.render("jupiter.html");
+})
+
 //Listener
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(3000, function(){
     console.log("Express server is running...");
 });
