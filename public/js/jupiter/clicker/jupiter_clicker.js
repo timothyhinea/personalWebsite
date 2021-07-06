@@ -2,7 +2,6 @@ $(document).ready(function(){
     
     //global variables
     var score = 0;
-    var attempts = localStorage.getItem("total_attempts");
 	var monster;
 	var player;
 	var view;

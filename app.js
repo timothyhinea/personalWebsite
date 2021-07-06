@@ -36,6 +36,6 @@ app.get("/jupiter_clicker", function(req, res){
 })
 
 //Listener
-app.listen(process.env.PORT, function(){
+app.listen(3000, function(){
     console.log("Express server is running...");
 });
