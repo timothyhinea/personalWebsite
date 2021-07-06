@@ -21,4 +21,12 @@ nav a:hover {
     transition: .9s;
 }
 
+progress{
+    background-color: blue;
+}
+
+progress:after {
+    content: attr(value);
+  }
+
 canvas { background: #eee; display: block; margin: 0 auto; }

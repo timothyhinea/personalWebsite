@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jupiter - Clicker</title>
+        <link rel="stylesheet" 
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="css/jupiter_clicker.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.11.0/underscore-min.js" ></script> 
+
+        <script src="js/jupiter/clicker/jupiter_clicker.js"></script>
+        <script src="js/jupiter/clicker/Model.js"></script>
+        <script src="js/jupiter/clicker/view.js"></script>
+    </head>
+    <body class="text-center">
+        
+        <h1>Space Cliker</h1>
+
+        <hr />
+        <nav>
+            <a href="/">Home</a>
+            <a href="/venus">Venus</a>
+            <a href="/mercury">Mercury</a>
+            <a href="/earth">Earth</a>
+            <a href="/mars">Mars</a>
+            <a href="/jupiter">Jupiter</a>
+        </nav>
+        <br /><br />
+        <nav>
+            <a href="/jupiter">Matching</a>
+        </nav>
+        <br/>
+
+    	
+    	 <!-- Question 4 -->
+    	<h3 id="displayMessage"><span id="markImg4"></span>Click the star ship to attack!</h3>
+        <h3><span id="playerLevel"></span></h3>
+        <h2 id="totalScore"></h2>
+
+        <progress id="health" ></progress>
+    	<div id="cardChoices"></div>
+		<div id="q4Feedback"></div>
+		<br><br>
+		
+		<!-- Question 5 -->
+		
+	
+	    <br></br>
+	    
+
+        <!-- Validation and score -->
+        
+        
+        <button id="restart" class="btn btn-outline-success">Restart</button>
+        <br><br>
+      
+
+
+        
+    </body>
+    
+    <%- include('../partials/footer.ejs') %>
+
+</html>
