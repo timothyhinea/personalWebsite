@@ -28,6 +28,7 @@ module.exports = { MySQLConnection: connection };
 		connection.connect((err) => {
 			if(err){
 				console.log('Error connection to DB');
+
 				return;
 			}
 			console.log('Connected!');

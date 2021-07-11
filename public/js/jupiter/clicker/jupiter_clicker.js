@@ -31,7 +31,7 @@ $(document).ready(function(){
 		if(monster.hp <= 0)
 			{
 				score += 1;
-				if(score%5 === 0)
+				if(score%3 === 0)
 					player.levelUp();
 				view.scoreDiplay(score, player.attack);
 				shuffle(this);

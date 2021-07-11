@@ -35,7 +35,14 @@ app.get("/jupiter_clicker", function(req, res){
     res.render("jupiter/jupiter_clicker.html");
 })
 
+app.get("/jupiter_pong", function(req, res){
+    res.render("jupiter/jupiter_pong.html");
+})
+app.get("/jupiter_pongv2", function(req, res){
+    res.render("jupiter/jupiter_pongv2.html");
+})
+
 //Listener
-app.listen(process.env.PORT, function(){
+app.listen(5000, function(){
     console.log("Express server is running...");
 });

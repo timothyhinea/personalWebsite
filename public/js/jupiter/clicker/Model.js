@@ -6,14 +6,14 @@ class Player{
     }
 
     levelUp(){
-        this.attack = this.attack +1;
+        this.attack = this.attack +=2 ;
     }
 }
 
 
 class Monster{
     constructor(level){
-        this.hp = Math.floor(Math.random()* level * 10);
+        this.hp = Math.floor((Math.random()* level * 10));
     }
     takeDmg(atk){
         this.hp = this.hp - atk;
