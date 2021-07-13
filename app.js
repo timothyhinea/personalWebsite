@@ -45,6 +45,6 @@ app.get("/jupiter_pongv2", function(req, res){
 })
 
 //Listener
-app.listen(5000, function(){
+app.listen(port, function(){
     console.log("Express server is running...");
 });
