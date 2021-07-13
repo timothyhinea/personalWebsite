@@ -3,9 +3,7 @@ $(document).ready(function(){
    
     console.log('hello from controller');
     view = new View();
-    player = new Player(view.canvas.width, view.canvas.height);
-    monsters = [];
-    monsters[0] = new Monster(view.canvas.width, view.canvas.height, 1);
+    engine = new Engine(view);
 
     
     var rightPressed = false;
@@ -38,7 +36,7 @@ $(document).ready(function(){
         else if(e.key == "Down" || e.key == "ArrowDown") {
          downPressed = true;
        }
-       console.log(upPressed, rightPressed, downPressed, leftPressed);
+
     }
   
     function keyUpHandler(e) {
@@ -52,7 +50,7 @@ $(document).ready(function(){
           upPressed = false;
         }
         else if(e.key == "Down" || e.key == "ArrowDown") {
-         downPressed = false;
+          downPressed = false;
        }
     }
   
@@ -71,10 +69,10 @@ $(document).ready(function(){
   
     function draw() {
       view.ctx.clearRect(0, 0, view.canvas.width, view.canvas.height);
-      player.move(upPressed, rightPressed, downPressed, leftPressed, monsters);
-      view.drawPlayer(player);
-      view.drawMonster(monsters);
-      view.drawScore();
+      engine.run(upPressed, rightPressed, downPressed, leftPressed);
+      view.drawPlayer(engine.player);
+      view.drawMonster(engine.monsters);
+      view.drawScore(engine.score);
       requestAnimationFrame(draw);
     }
   

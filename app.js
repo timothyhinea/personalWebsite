@@ -6,6 +6,8 @@ var sql = require('./services/mysqlService');
 require('dotenv').config();
 const connection = sql.Connect();
 
+var port = process.env.PORT || 5000;
+
 //routes
 app.get("/", function(req, res){
     res.render("index.html");
