@@ -6,11 +6,13 @@ $(document).ready(function(){
     engine = new Engine(view);
 
     
-    var rightPressed = false;
-    var leftPressed = false;
-    var upPressed = false;
-    var downPressed = false;
 
+    var controlls = {up: false, 
+                      right: false, 
+                      down: false, 
+                      left: false, 
+                      mouseX: false, 
+                      mouseY: false}
   
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
@@ -24,33 +26,32 @@ $(document).ready(function(){
 }, false);
 
     function keyDownHandler(e) {
-        if(e.key == "Right" || e.key == "ArrowRight") {
-            rightPressed = true;
+        if(e.key == "Right" || e.key == "ArrowRight" || e.keyCode == 68) {
+            controlls.right = true;
         }
-        else if(e.key == "Left" || e.key == "ArrowLeft") {
-            leftPressed = true;
+        else if(e.key == "Left" || e.key == "ArrowLeft" || e.keyCode == 65) {
+          controlls.left = true;
         }
-        else if(e.key == "Up" || e.key == "ArrowUp") {
-          upPressed = true;
+        else if(e.key == "Up" || e.key == "ArrowUp" || e.keyCode == 87) {
+          controlls.up = true;
         }
-        else if(e.key == "Down" || e.key == "ArrowDown") {
-         downPressed = true;
+        else if(e.key == "Down" || e.key == "ArrowDown" || e.keyCode == 83) {
+          controlls.down = true;
        }
-
     }
   
     function keyUpHandler(e) {
-        if(e.click == "Right" || e.key == "ArrowRight") {
-            rightPressed = false;
+        if(e.click == "Right" || e.key == "ArrowRight" || e.keyCode == 68) {
+          controlls.right = false;
         }
-        else if(e.key == "Left" || e.key == "ArrowLeft") {
-            leftPressed = false;
+        else if(e.key == "Left" || e.key == "ArrowLeft" || e.keyCode == 65) {
+          controlls.left = false;
         }
-        else if(e.key == "Up" || e.key == "ArrowUp") {
-          upPressed = false;
+        else if(e.key == "Up" || e.key == "ArrowUp" || e.keyCode == 87) {
+          controlls.up = false;
         }
-        else if(e.key == "Down" || e.key == "ArrowDown") {
-          downPressed = false;
+        else if(e.key == "Down" || e.key == "ArrowDown" || e.keyCode == 83) {
+          controlls.down = false;
        }
     }
   
@@ -58,9 +59,10 @@ $(document).ready(function(){
     }
   
     function mouseLeftClickHandler(e) {
+      controlls.mouseX = e.layerX;
+      controlls.mouseY = e.layerY;
     }
     
-
     function drawLives() {
       ctx.font = "16px Arial";
       ctx.fillStyle = "#0095DD";
@@ -68,11 +70,13 @@ $(document).ready(function(){
     }
   
     function draw() {
+
       view.ctx.clearRect(0, 0, view.canvas.width, view.canvas.height);
-      engine.run(upPressed, rightPressed, downPressed, leftPressed);
-      view.drawPlayer(engine.player);
+      engine.run(controlls);
+      view.drawPlayer(engine.player.attr);
       view.drawMonster(engine.monsters);
       view.drawScore(engine.score);
+      view.drawProjectiles(engine.projectiles);
       requestAnimationFrame(draw);
     }
   

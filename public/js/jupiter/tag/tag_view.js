@@ -7,7 +7,6 @@ class View{
     }
 
     drawPlayer(player) {
-        //console.log(player.x,player.y,player.width,player.height);
         this.ctx.beginPath();
         this.ctx.rect(player.x, player.y, player.width, player.height);
         this.ctx.fillStyle = player.color;
@@ -31,5 +30,14 @@ class View{
         this.ctx.fillStyle = "#0095DD";
         this.ctx.fillText("Score: "+ score, 8, 20);
       }
+    drawProjectiles(projectiles){
+        projectiles.forEach(projectile =>{
+            this.ctx.beginPath();
+            this.ctx.arc(projectile.x, projectile.y, projectile.r, 0, Math.PI*2);
+            this.ctx.fillStyle = "#0095DD";
+            this.ctx.fill();
+            this.ctx.closePath();
+        })
+    }
 
 }
